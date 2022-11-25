@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Videojuegos";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/videojuego")
+</head>
+<body>
+    <main class="main">
+        <div class="title">
+            <a href="perfil.html"><img class="arrow" src="img/arrow-left-solid.svg" alt=""></a><br>
+            <h1 class="titulo">FORTNITE</h1>
+        </div>
+        <div class="container">
+            <div class="portada">
+                <img src="~/img/portada.png">
+            </div>
+            <div class="descripcion">
+                <h2 class="subtitulo">Descripción</h2>
+                <br>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quis nemo ea, eligendi facere autem
+                    quod adipisci exercitationem incidunt consectetur? Quos placeat et eum esse dicta repellat voluptate
+                    accusamus unde harum sint, dignissimos sapiente reiciendis rem alias nemo consectetur nam beatae
+                    maiores. Harum repellendus molestiae sed eveniet, ipsa quaerat aspernatur nobis iure! Eaque, est
+                    illum vero debitis culpa recusandae ab itaque aliquam atque, ipsam assumenda laudantium cum
+                    blanditiis tempore, explicabo nihil nostrum distinctio consectetur odit? Repudiandae, numquam
+                    commodi amet obcaecati fugiat tenetur placeat iste laborum assumenda provident, magni dolor quis
+                    nostrum beatae tempora veritatis! Autem vel iste veniam enim quo.
+                </p><br>
+
+            </div>
+        </div>
+        <div class="detalles">
+            <h2 class="subtitulo"><b>Plataformas</b></h2>
+            <ul>
+                <li class="list">Playstation 4</li>
+                <li class="list">XBOX ONE</li>
+                <li class="list">Nintendo Switch</li>
+                <li class="list">PC</li>
+            </ul>
+            <h2 class="subtitulo"><b>Fecha de Lanzamiento</b></h2>
+            <p>
+                21 de julio de 2017
+            </p>
+        </div>
+    </main>
+</body>
+</html>

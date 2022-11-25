@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Edita tu perfil";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/editarPerfil")
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Editando perfil</h1>
+        <hr> <br>
+        <P class="tm">Informacion de la cuenta</P>
+        <br>
+        <p class="t">Nombre del Usuario</p>
+        <span>Ejemplo</span> <br><br>
+        <p class="t">Email</p>
+        <span>Ejemplo</span> <br> <br>
+        <p class="t">Telefono</p>
+        <span>Ejemplo</span> <br> <br>
+        <p class="t">Contraseña</p>
+        <span>Ejemplo</span> <br> <br>
+        <button type="button" class="boton-contraseña" onclick="location.href='contraseña.html'">
+            <i class="icono fas fa-pen"></i> @Html.ActionLink("Editar Contraseña","editarContraseña","Home")
+        </button>
+        <br>
+        <hr>
+        <br>
+        <P class="tm">Informacion de la cuenta</P>
+        <br>
+        <p class="t">Nacionalidad</p>
+        <input type="text" class="text"> <br> <br>
+        <p class="t">Edad</p>
+        <input type="text" class="text"> <br> <br>
+        <p class="t">Descripcion</p>
+        <input type="text" class="text-G"> <br> <br>
+        <button type="button" class="boton-g" onclick="location.href='perfil.html'">
+            </i>Guardar cambios
+        </button>
+        &nbsp; &nbsp;
+        <button type="button" class="boton-b">
+            </i>Borrar cuenta
+        </button>
+    </div>
+</body>
+</html>

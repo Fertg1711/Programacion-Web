@@ -1,0 +1,34 @@
+
+.container{
+    padding-left: 50px;
+    padding-top: 60px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+.container .titulo{
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.container .text{
+    width: 60%;
+    background-color: #5c5f63;
+    color: #FFFFFF;
+}
+
+.container .t{
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.container .boton-g{
+    background-color: #ec582f;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 8px;
+}

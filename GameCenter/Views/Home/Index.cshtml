@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Registrar";
+}
+
+<head>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/registrar")
+</head>
+    <br>
+    <div style="padding: 0; margin: 0;">
+        <h1>REGISTRAR</h1>
+        <h3>Nombre</h3>
+        <input type="text">
+        <h3>Nombre de Usuario</h3>
+        <input type="text">
+        <h3>Correo Electrónico</h3>
+        <input type="text">
+        <h3>Contraseña</h3>
+        <input type="text">
+        <h3>Numero de Telefono (Opcional)</h3>
+        <input type="text">
+        <h3>Consola Preferida</h3>
+        <select name="cons" id="cons">
+            <option>Selecciona...</option>
+            <option value="XB">Xbox</option>
+            <option value="PS">PlayStation</option>
+            <option value="PC">Computadora</option>
+            <option value="SW">Nintendo Switch</option>
+        </select>
+        <br>
+        <p>¿Ya tienes una cuenta?</p>
+        @Html.ActionLink("Inicia Sesion", "login", "Home")
+        <input type="button" class="myButton" value="Registrar">
+    </div>

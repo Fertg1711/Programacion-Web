@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Videojuegos";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/videojuegos")
+</head>
+<body>
+    <div class="container">
+        <div class="caja">
+            <div class="caja-img">
+                <img src="~/img/portada.png" alt="">
+            </div>
+            @Html.ActionLink("FORTNITE", "videojuego", "Home")
+        </div>
+    </div>
+</body>
+</html>
