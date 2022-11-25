@@ -84,3 +84,5 @@ D:\VSProjects\GameCenter\GameCenter\obj\Debug\GameCenter.csproj.CoreCompileInput
 D:\VSProjects\GameCenter\GameCenter\obj\Debug\GameCenter.csproj.CopyComplete
 D:\VSProjects\GameCenter\GameCenter\obj\Debug\GameCenter.dll
 D:\VSProjects\GameCenter\GameCenter\obj\Debug\GameCenter.pdb
+D:\VSProjects\GameCenter\GameCenter\bin\EntityFramework.dll
+D:\VSProjects\GameCenter\GameCenter\bin\EntityFramework.xml

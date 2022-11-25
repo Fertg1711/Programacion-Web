@@ -14,7 +14,7 @@
     <div class="perfil-usuario-header">
         <div class="perfil-usuario-portada">
             <div class="perfil-usuario-avatar">
-                <img src="./img/usuario.png" alt="img-avatar">
+                <img src="~/img/usuario.png" alt="img-avatar">
                 <button type="button" class="boton-avatar">
                     <i class="far fa-image"></i>
                 </button>
@@ -26,29 +26,46 @@
     </div>
     <div class="perfil-usuario-body">
         <div class="perfil-usuario-bio">
-            <h3 class="titulo">Nombre de usuario</h3>
+            <h3 class="titulo">
+                @foreach(var usuario in Model)
+            {
+                @usuario.nombre;
+            }
+            </h3>
             <button type="button" class="boton-editar" onclick="location.href='editar.html'">
                 <i class="icono fas fa-pen"></i>@Html.ActionLink("Editar", "editarPerfil", "Home")
             </button>
-            <p class="texto">Hola soy un nuevo usuario!</p>
+            <p class="texto">
+            
+            @foreach(var usuario in Model)
+            {
+                @usuario.descripcion;
+            }
+            
+            </p>
 
         </div>
         <div class="perfil-usuario-footer">
-            <ul class="lista-datos">
-                <li><i class="icono fas fa-user"></i>Nombre: ...</li>
-                <li><i class="icono fas fa-badge-check"></i>Miembro desde: ...</li>
-                <li><i class="icono fas fa-gamepad"></i>Plataformas: ...</li>
+            <ul class="lista-datos"
+                <li><i class="icono fas fa-gamepad"></i>Plataformas: @foreach (var usuario in Model) {
+                @usuario.plataforma;
+                }  <img src="~/img/logo xbox.png" style="width: 20px;" /></li> 
             </ul>
             <ul class="lista-datos">
-                <li><i class="icono fas fa-flag"></i>Nacionalidad: ...</li>
-                <li><i class="icono fas fa-calendar"></i>Edad: ... </li>
+                <li><i class="icono fas fa-flag"></i>Nacionalidad: @foreach (var usuario in Model) {
+                @usuario.nacionalidad;
+                }</li>
+                <li><i class="icono fas fa-calendar"></i>Edad: @foreach (var usuario in Model)
+                {
+                    @usuario.edad;
+                }</li>
             </ul>
         </div>
         <br>
         <div>
             <div class="perfil-usuario-footer" id="perfil-amigos">
                 <div class="perfil-usuario-footer-titulo">
-                    <h3>Lista de Amigos</h3>
+                    <h3>Lista de Plataformas</h3>
                 </div>
                 <br>
                 <ul class="lista-datos2">

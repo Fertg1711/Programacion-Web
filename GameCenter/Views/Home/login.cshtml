@@ -11,14 +11,16 @@
 
 <div style="margin: 0; padding: 0; text-align: center;">
     <h1>INICIAR SESION</h1>
-    <h2>Correo Electrónico</h2>
-    <input type="text">
-    <h2>Contraseña</h2>
-    <input type="text">
-    <br>
-    <p>¿No tienes una cuenta?</p>
-    @Html.ActionLink("Registrate", "index", "Home")
-    <input type="button" class="myButton" value="Iniciar">
+    <form>
+        <h2>Correo Electrónico</h2>
+        <input type="email" required>
+        <h2>Contraseña</h2>
+        <input type="password" required>
+        <br>
+        <p>¿No tienes una cuenta?</p>
+        @Html.ActionLink("Registrate", "index", "Home")
+        <input type="submit" class="myButton" value="Iniciar">
+    </form>
 </div>
 <br>
 

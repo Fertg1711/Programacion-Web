@@ -45,10 +45,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -124,6 +130,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\usuario.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usuario.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usuario.cs">
+      <DependentUpon>usuario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usuario.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usuario1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usuario.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -150,8 +174,25 @@
     <Content Include="img\logo.png" />
     <Content Include="img\portada.png" />
     <Content Include="img\usuario.png" />
+    <Content Include="Models\usuario.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>usuario.edmx</DependentUpon>
+      <LastGenOutput>usuario.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\usuario.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>usuario.edmx</DependentUpon>
+      <LastGenOutput>usuario1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\usuario.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>usuario.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\usuario.edmx.diagram">
+      <DependentUpon>usuario.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -185,7 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -199,6 +239,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

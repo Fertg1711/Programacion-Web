@@ -17,15 +17,35 @@
         <P class="tm">Informacion de la cuenta</P>
         <br>
         <p class="t">Nombre del Usuario</p>
-        <span>Ejemplo</span> <br><br>
+        <span style="color: white;">
+            @foreach (var usuario in Model)
+            {
+                @usuario.nombre;
+            }
+        </span> <br><br>
         <p class="t">Email</p>
-        <span>Ejemplo</span> <br> <br>
-        <p class="t">Telefono</p>
-        <span>Ejemplo</span> <br> <br>
+        <span style="color: white;">
+            @foreach (var usuario in Model)
+            {
+                @usuario.email;
+            }
+        </span> <br><br>
+        <p class="t">Edad</p>
+        <span style="color: white;">
+            @foreach (var usuario in Model)
+            {
+                @usuario.edad;
+            }
+        </span> <br><br>
         <p class="t">Contraseña</p>
-        <span>Ejemplo</span> <br> <br>
+        <span style="color: white;">
+            @foreach (var usuario in Model)
+            {
+                @usuario.contraseña;
+            }
+        </span> <br><br>
         <button type="button" class="boton-contraseña" onclick="location.href='contraseña.html'">
-            <i class="icono fas fa-pen"></i> @Html.ActionLink("Editar Contraseña","editarContraseña","Home")
+            <i class="icono fas fa-pen"></i> @Html.ActionLink("Editar Contraseña", "editarContraseña", "Home")
         </button>
         <br>
         <hr>
